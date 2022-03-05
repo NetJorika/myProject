@@ -1,0 +1,16 @@
+<aura:component>
+    <!-- RIGHT NOW NOT IN USE -->
+    <aura:attribute name="HEADERlist" type="type[]"/>
+    <aura:attribute name="some" type="String"/>
+    <thead>
+        <tr class="slds-line-height_reset">
+            <aura:iteration items="{!v.HEADERlist}" var="field">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="{!field}"/> {!field} 
+                    <lightning:buttonIcon iconName="utility:sort" variant="bare" title="Sorting"
+                                          onclick="{! c.handleClick }"/>
+                </th>
+            </aura:iteration>
+        </tr>
+    </thead> 
+</aura:component>
